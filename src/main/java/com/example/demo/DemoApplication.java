@@ -9,20 +9,12 @@ import com.example.demo.model.Student;
 import com.example.demo.repository.StudentRepository;
 
 @SpringBootApplication
-public class DemoApplication implements CommandLineRunner{
+public class DemoApplication {
 
 	public static void main (String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 		
 	}
-	@Autowired
-	private StudentRepository studentreps;
-	public void run(String... args) throws Exception{
-		Student st=new Student();
-		st.setEmail("msdvk@gmail.com");
-		st.setFaname("King");
-		st.setLname("Kohli");
-		studentreps.save(st);
-	}
+
 
 }
